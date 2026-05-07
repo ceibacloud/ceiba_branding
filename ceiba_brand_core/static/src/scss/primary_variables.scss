@@ -1,0 +1,11 @@
+// Ceiba branding overrides — prepended before web's primary_variables.scss.
+// Mint is the primary brand identity, Dark Green is the primary action color.
+
+$o-brand-primary:           #142e26;   // Dark Green for actions/buttons
+$o-brand-secondary:         #20C997;   // Mint for accents/brand
+
+$o-community-color:         #20C997;   // Mint brand identity
+
+$primary:                   $o-brand-primary;
+$link-color:                $o-brand-primary;
+$o-main-link-color:         $o-brand-primary;

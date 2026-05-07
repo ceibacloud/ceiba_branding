@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Override the Login Layout -->
+    <template id="ceiba_login_layout" inherit_id="web.login_layout" name="Ceiba Clouds Login Layout">
+        <xpath expr="//t[@t-call='web.frontend_layout']" position="replace">
+            <t t-call="web.frontend_layout">
+                <t t-set="html_data" t-value="{'style': 'height: 100%;'}"/>
+                <t t-set="no_header" t-value="True"/>
+                <t t-set="no_footer" t-value="True"/>
+
+                <!-- Split Screen Container -->
+                <div class="d-flex w-100 flex-column flex-lg-row m-0 p-0" style="min-height: 100vh; font-family: 'Inter', sans-serif;">
+                    
+                    <!-- Left Side: Hero Image & Brand -->
+                    <div class="col-lg-7 d-none d-lg-flex flex-column justify-content-center align-items-center position-relative text-white m-0 p-0" style="background: linear-gradient(135deg, #142e26 0%, #0a1713 100%); overflow: hidden;">
+                        
+                        <!-- Background Image -->
+                        <div class="position-absolute w-100 h-100" style="background-image: url('/ceiba_branding/static/src/img/login_bg.png'); background-size: cover; background-position: center; opacity: 0.6;"></div>
+                        
+                        <!-- Overlay Content -->
+                        <div class="position-relative z-index-1 text-center p-5">
+                            <h1 class="display-3 font-weight-bold mb-3" style="color: #20C997; text-shadow: 0 4px 12px rgba(0,0,0,0.5); font-family: 'Inter Tight', sans-serif;">Ceiba Clouds</h1>
+                            <p class="lead fw-light" style="font-size: 1.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5); letter-spacing: 0.05em;">Hospitality Management Excellence</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Login Form -->
+                    <div class="col-12 col-lg-5 d-flex flex-column justify-content-center align-items-center bg-white m-0 p-0" style="min-height: 100vh; box-shadow: -20px 0 60px rgba(0,0,0,0.1); z-index: 10;">
+                        <div class="w-100 p-5" style="max-width: 480px;">
+                            
+                            <!-- Logo Container -->
+                            <div class="text-center mb-5">
+                                <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Company Logo" class="img-fluid" style="max-height: 100px;"/>
+                            </div>
+                            
+                            <!-- Welcome Text for Mobile -->
+                            <div class="text-center mb-4 d-block d-lg-none">
+                                <h2 style="color: #142e26; font-weight: 700; font-family: 'Inter Tight', sans-serif;">Ceiba Clouds</h2>
+                                <p class="text-muted">HMS Portal</p>
+                            </div>
+                            
+                            <!-- Custom styling for the login form elements -->
+                            <style>
+                                :root {
+                                    --ceiba-primary: #20C997;
+                                    --ceiba-primary-hover: #158765;
+                                }
+                                .btn-primary {
+                                    background-color: var(--ceiba-primary) !important;
+                                    border-color: var(--ceiba-primary) !important;
+                                    color: #FFFFFF !important;
+                                    padding: 12px 24px !important;
+                                    font-weight: 600 !important;
+                                    border-radius: 8px !important;
+                                    transition: all 0.2s ease !important;
+                                }
+                                .btn-primary:hover {
+                                    background-color: var(--ceiba-primary-hover) !important;
+                                    border-color: var(--ceiba-primary-hover) !important;
+                                    transform: translateY(-1px);
+                                    box-shadow: 0 4px 12px rgba(32, 201, 151, 0.2);
+                                }
+                                .oe_login_form .form-control {
+                                    border-radius: 8px;
+                                    padding: 12px 16px;
+                                    border: 1px solid #e0e6ed;
+                                }
+                                .oe_login_form .form-control:focus {
+                                    border-color: var(--ceiba-primary);
+                                    box-shadow: 0 0 0 4px rgba(32, 201, 151, 0.1);
+                                }
+                                .oe_login_form label {
+                                    font-weight: 500;
+                                    color: #4a5568;
+                                    margin-bottom: 8px;
+                                }
+                            </style>
+
+                            <!-- Insert the actual login form content -->
+                            <t t-out="0"/>
+
+                            <div class="text-center mt-5">
+                                <small class="text-muted">Powered by Ceiba Clouds &amp; Odoo</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>

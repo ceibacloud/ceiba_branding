@@ -1,0 +1,55 @@
+// Ceiba Branding — Backend UI Refinements
+// Mint Navbar, Dark Green Buttons.
+
+:root {
+    --ceiba-mint:              #20C997;
+    --ceiba-ink:               #142e26;
+    --ceiba-ink-hover:         #0a1713;
+    --ceiba-surface:           #f0f5f4;
+}
+
+// ─── Navbar: Mint Brand Identity ──────────────────────────
+.o_main_navbar {
+    background-color: var(--ceiba-mint) !important;
+    color: var(--ceiba-ink) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.o_main_navbar .o_menu_brand,
+.o_main_navbar .o_nav_entry,
+.o_main_navbar .dropdown-toggle,
+.o_main_navbar .o_menu_sections .nav-link {
+    color: var(--ceiba-ink) !important;
+    font-weight: 600;
+}
+
+.o_main_navbar .nav-link:hover,
+.o_main_navbar .dropdown-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+// ─── Buttons: Dark Green Action ──────────────────────────
+.btn-primary {
+    --bs-btn-bg:                  var(--ceiba-ink);
+    --bs-btn-border-color:        var(--ceiba-ink);
+    --bs-btn-hover-bg:            var(--ceiba-ink-hover);
+    --bs-btn-hover-border-color:  var(--ceiba-ink-hover);
+    --bs-btn-active-bg:           var(--ceiba-ink-hover);
+    --bs-btn-color:               #ffffff;
+    --bs-btn-hover-color:         #ffffff;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(20, 46, 38, 0.1);
+}
+
+// ─── Kanban Cards ─────────────────────────────────────────────────────
+.o_kanban_view .o_kanban_record {
+    border-radius: 8px;
+    border: 1px solid #e8eeec;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(32, 201, 151, 0.12);
+        border-color: var(--ceiba-mint);
+    }
+}
