@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Override the Login Layout for Fuel Management -->
+    <template id="fuel_login_layout" inherit_id="web.login_layout" name="Fuel Management Login Layout" priority="20">
+        <xpath expr="//t[@t-call='web.frontend_layout']" position="replace">
+            <t t-call="web.frontend_layout">
+                <t t-set="html_data" t-value="{'style': 'height: 100%;'}"/>
+                <t t-set="no_header" t-value="True"/>
+                <t t-set="no_footer" t-value="True"/>
+
+                <!-- Split Screen Container -->
+                <div class="d-flex w-100 flex-column flex-lg-row m-0 p-0" style="min-height: 100vh; font-family: 'Inter', sans-serif; background-color: #050a14;">
+                    
+                    <!-- Left Side: Hero Image & Brand (Gas Station Themed) -->
+                    <div class="col-lg-7 d-none d-lg-flex flex-column justify-content-center align-items-center position-relative text-white m-0 p-0" style="background: linear-gradient(135deg, #050a14 0%, #0d1b2a 100%); overflow: hidden;">
+                        
+                        <!-- Background Image (Generated Gas Station) -->
+                        <div class="position-absolute w-100 h-100" style="background-image: url('/fuel_management/static/src/img/login_bg.png'); background-size: cover; background-position: center; opacity: 0.7;"></div>
+                        
+                        <!-- Glow Effect -->
+                        <div class="position-absolute w-100 h-100" style="background: radial-gradient(circle at center, rgba(0, 119, 182, 0.2) 0%, transparent 70%);"></div>
+                        
+                        <!-- Overlay Content -->
+                        <div class="position-relative z-index-1 text-center p-5">
+                            <div class="mb-4">
+                                <i class="fa fa-gas-pump" style="font-size: 4rem; color: #ff9e00; filter: drop-shadow(0 0 15px rgba(255, 158, 0, 0.5));"></i>
+                            </div>
+                            <h1 class="display-3 font-weight-bold mb-3" style="color: #ffffff; text-shadow: 0 0 20px rgba(0, 119, 182, 0.8); font-family: 'Inter Tight', sans-serif;">Fuel Manager</h1>
+                            <p class="lead fw-light" style="font-size: 1.5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.8); letter-spacing: 0.1em; color: #00b4d8;">Precision Fueling &amp; Logistics</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Login Form -->
+                    <div class="col-12 col-lg-5 d-flex flex-column justify-content-center align-items-center m-0 p-0" style="min-height: 100vh; background: #ffffff; box-shadow: -20px 0 60px rgba(0,0,0,0.5); z-index: 10; border-left: 4px solid #ff9e00;">
+                        <div class="w-100 p-5" style="max-width: 480px;">
+                            
+                            <!-- Logo Container -->
+                            <div class="text-center mb-5">
+                                <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Company Logo" class="img-fluid" style="max-height: 120px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));"/>
+                            </div>
+                            
+                            <!-- Welcome Text for Mobile -->
+                            <div class="text-center mb-4 d-block d-lg-none">
+                                <h2 style="color: #0d1b2a; font-weight: 800; font-family: 'Inter Tight', sans-serif;">Fuel Manager</h2>
+                                <p class="text-muted">Terminal Access</p>
+                            </div>
+                            
+                            <!-- Custom styling for the login form elements -->
+                            <style>
+                                :root {
+                                    --fuel-primary: #0077b6;
+                                    --fuel-secondary: #ff9e00;
+                                    --fuel-dark: #0d1b2a;
+                                }
+                                .btn-primary {
+                                    background: linear-gradient(90deg, var(--fuel-primary) 0%, #00b4d8 100%) !important;
+                                    border: none !important;
+                                    color: #FFFFFF !important;
+                                    padding: 14px 24px !important;
+                                    font-weight: 700 !important;
+                                    border-radius: 12px !important;
+                                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+                                    text-transform: uppercase !important;
+                                    letter-spacing: 1px !important;
+                                    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3) !important;
+                                }
+                                .btn-primary:hover {
+                                    transform: translateY(-2px) !important;
+                                    box-shadow: 0 8px 25px rgba(0, 119, 182, 0.4) !important;
+                                    filter: brightness(1.1);
+                                }
+                                .oe_login_form .form-control {
+                                    border-radius: 12px;
+                                    padding: 14px 18px;
+                                    border: 2px solid #e9ecef;
+                                    transition: all 0.2s ease;
+                                    background-color: #f8f9fa;
+                                }
+                                .oe_login_form .form-control:focus {
+                                    border-color: var(--fuel-primary);
+                                    background-color: #ffffff;
+                                    box-shadow: 0 0 0 4px rgba(0, 119, 182, 0.1);
+                                }
+                                .oe_login_form label {
+                                    font-weight: 600;
+                                    color: var(--fuel-dark);
+                                    margin-bottom: 10px;
+                                    font-size: 0.9rem;
+                                    text-transform: uppercase;
+                                    letter-spacing: 0.5px;
+                                }
+                                .input-group-text {
+                                    border-radius: 12px 0 0 12px;
+                                    background-color: #f8f9fa;
+                                    border: 2px solid #e9ecef;
+                                    border-right: none;
+                                }
+                            </style>
+
+                            <!-- Insert the actual login form content -->
+                            <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                                <div class="card-body p-0">
+                                    <t t-out="0"/>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-5">
+                                <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                                    <div style="height: 1px; width: 40px; background: #dee2e6;"></div>
+                                    <span class="text-muted small fw-bold text-uppercase" style="letter-spacing: 1px;">Terminal Security</span>
+                                    <div style="height: 1px; width: 40px; background: #dee2e6;"></div>
+                                </div>
+                                <small class="text-muted">© 2026 Ceiba Clouds Fuel Logistics</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
