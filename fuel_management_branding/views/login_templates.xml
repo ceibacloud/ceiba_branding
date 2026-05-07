@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Override the Login Layout for Fuel Management -->
-    <template id="fuel_login_layout" inherit_id="web.login_layout" name="Fuel Management Login Layout" priority="20">
+    <template id="fuel_login_layout" inherit_id="ceiba_brand_core.ceiba_login_layout" name="Fuel Management Login Layout" priority="20">
         <xpath expr="//t[@t-call='web.frontend_layout']" position="replace">
             <t t-call="web.frontend_layout">
                 <t t-set="html_data" t-value="{'style': 'height: 100%;'}"/>
