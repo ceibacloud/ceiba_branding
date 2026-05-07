@@ -36,7 +36,7 @@
                             
                             <!-- Logo Container -->
                             <div class="text-center mb-5">
-                                <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Company Logo" class="img-fluid" style="max-height: 120px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));"/>
+                                <img src="/ceiba_brand_core/static/src/img/logo_ceiba.webp" alt="Ceiba Clouds" class="img-fluid" style="max-height: 140px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));"/>
                             </div>
                             
                             <!-- Welcome Text for Mobile -->
