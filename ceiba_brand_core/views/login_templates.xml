@@ -15,7 +15,7 @@
                     <div class="col-lg-7 d-none d-lg-flex flex-column justify-content-center align-items-center position-relative text-white m-0 p-0" style="background: linear-gradient(135deg, #142e26 0%, #0a1713 100%); overflow: hidden;">
                         
                         <!-- Background Image -->
-                        <div class="position-absolute w-100 h-100" style="background-image: url('/ceiba_branding/static/src/img/login_bg.png'); background-size: cover; background-position: center; opacity: 0.6;"></div>
+                        <div class="position-absolute w-100 h-100" style="background-image: url('/ceiba_brand_core/static/src/img/login_bg.png'); background-size: cover; background-position: center; opacity: 0.6;"></div>
                         
                         <!-- Overlay Content -->
                         <div class="position-relative z-index-1 text-center p-5">

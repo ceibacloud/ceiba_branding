@@ -14,10 +14,10 @@
     ],
     'assets': {
         'web._assets_primary_variables': [
-            ('prepend', 'ceiba_branding/static/src/scss/primary_variables.scss'),
+            ('prepend', 'ceiba_brand_core/static/src/scss/primary_variables.scss'),
         ],
         'web.assets_backend': [
-            'ceiba_branding/static/src/scss/backend_overrides.scss',
+            'ceiba_brand_core/static/src/scss/backend_overrides.scss',
         ],
     },
     'installable': True,
