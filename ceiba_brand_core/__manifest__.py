@@ -12,9 +12,11 @@
         'portal',
     ],
     'data': [
+        'security/security.xml',
         'views/login_templates.xml',
         'views/res_config_settings_views.xml',
         'views/portal_templates.xml',
+        'views/menu_views.xml',
     ],
     'assets': {
         'web._assets_primary_variables': [

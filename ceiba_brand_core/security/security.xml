@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="module_category_ceiba_branding" model="ir.module.category">
+            <field name="name">Ceiba Branding</field>
+            <field name="sequence">100</field>
+        </record>
+
+        <record id="group_show_apps" model="res.groups">
+            <field name="name">Show Apps Menu</field>
+            <field name="category_id" ref="module_category_ceiba_branding"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+    </data>
+</odoo>
