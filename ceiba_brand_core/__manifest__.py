@@ -8,9 +8,13 @@
     'license': 'LGPL-3',
     'depends': [
         'web',
+        'base_setup',
+        'portal',
     ],
     'data': [
         'views/login_templates.xml',
+        'views/res_config_settings_views.xml',
+        'views/portal_templates.xml',
     ],
     'assets': {
         'web._assets_primary_variables': [
