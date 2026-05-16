@@ -4,7 +4,7 @@
     'category': 'Hidden',
     'summary': 'Custom branding and UI for Ceiba Clouds',
     'author': 'Ceiba Clouds',
-    'website': 'https://www.ceibaclouds.com',
+    'website': 'https://www.ceibacloud.com',
     'license': 'LGPL-3',
     'depends': [
         'web',
