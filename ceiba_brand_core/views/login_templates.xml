@@ -13,15 +13,10 @@
                     
                     <!-- Left Side: Hero Image & Brand -->
                     <div class="col-lg-7 d-none d-lg-flex flex-column justify-content-center align-items-center position-relative text-white m-0 p-0" style="background: linear-gradient(135deg, #142e26 0%, #0a1713 100%); overflow: hidden;">
-                        
+
                         <!-- Background Image -->
-                        <div class="position-absolute w-100 h-100" style="background-image: url('/ceiba_brand_core/static/src/img/login_bg.png'); background-size: cover; background-position: center; opacity: 0.6;"></div>
+                        <div class="position-absolute w-100 h-100" style="background-image: url('/ceiba_brand_core/static/src/img/login_bg.png'); background-size: cover; background-position: center; opacity: 0.8;"></div>
                         
-                        <!-- Overlay Content -->
-                        <div class="position-relative z-index-1 text-center p-5">
-                            <h1 class="display-3 font-weight-bold mb-3" style="color: #20C997; text-shadow: 0 4px 12px rgba(0,0,0,0.5); font-family: 'Inter Tight', sans-serif;">Ceiba Clouds</h1>
-                            <p class="lead fw-light" style="font-size: 1.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5); letter-spacing: 0.05em;">Hospitality Management Excellence</p>
-                        </div>
                     </div>
 
                     <!-- Right Side: Login Form -->
@@ -30,13 +25,13 @@
                             
                             <!-- Logo Container -->
                             <div class="text-center mb-5">
-                                <img src="/ceiba_brand_core/static/src/img/logo_ceiba.webp" alt="Ceiba Clouds" class="img-fluid" style="max-height: 120px;"/>
+                                <img src="/ceiba_brand_core/static/src/img/logo_ceiba.webp" alt="Ceiba Cloud" class="img-fluid" style="max-height: 120px;"/>
                             </div>
                             
                             <!-- Welcome Text for Mobile -->
                             <div class="text-center mb-4 d-block d-lg-none">
-                                <h2 style="color: #142e26; font-weight: 700; font-family: 'Inter Tight', sans-serif;">Ceiba Clouds</h2>
-                                <p class="text-muted">HMS Portal</p>
+                                <h2 style="color: #142e26; font-weight: 700; font-family: 'Inter Tight', sans-serif;">Ceiba Cloud</h2>
+                                <p class="text-muted">Retail Management System</p>
                             </div>
                             
                             <!-- Custom styling for the login form elements -->
@@ -80,7 +75,7 @@
                             <t t-out="0"/>
 
                             <div class="text-center mt-5">
-                                <small class="text-muted">Powered by Ceiba Clouds &amp; Odoo</small>
+                                <small class="text-muted">Optimized by Ceiba Cloud &amp; Powered by Odoo</small>
                             </div>
                         </div>
                     </div>
